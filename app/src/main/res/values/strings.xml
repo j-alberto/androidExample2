@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Example</string>
-    <string name="btn_enter">Enter Puppy</string>
+    <string name="btn_enter">Click</string>
+    <string name="txt_titulo">Hello World</string>
+    <string name="snack_message">It\'s a SnackBar!</string>
+    <string name="snack_action">Action</string>
+    <string-array name="planetas">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="card_title">Android 5.0</string>
+    <string name="card_text">In this version Material Design was introduced, Android Lollipop</string>
 </resources>

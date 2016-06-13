@@ -16,4 +16,12 @@
     </string-array>
     <string name="card_title">Android 5.0</string>
     <string name="card_text">In this version Material Design was introduced, Android Lollipop</string>
+
+    <string name="event_create">onCreate()</string>
+    <string name="event_start">onStart()</string>
+    <string name="event_restart">onRestart()</string>
+    <string name="event_resume">onResume()</string>
+    <string name="event_pause">onPause()</string>
+    <string name="event_stop">onStop()</string>
+    <string name="event_destroy">onDestroy()</string>
 </resources>

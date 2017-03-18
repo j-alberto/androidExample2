@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar actionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(actionBar);
+        getSupportActionBar().setIcon(R.drawable.ic_pets);
 
         RecyclerView rvPets = (RecyclerView) findViewById(R.id.rvPets);
         rvPets.setLayoutManager(new LinearLayoutManager(getBaseContext()));

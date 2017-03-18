@@ -3,4 +3,5 @@
     <string name="app_favorites">Petagram - Favorites</string>
     <string name="btn_enter">Enter Puppy</string>
     <string name="action_favorites">Favorites</string>
+    <string name="action_other">Other Menu</string>
 </resources>

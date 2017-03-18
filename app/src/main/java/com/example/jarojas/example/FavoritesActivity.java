@@ -16,6 +16,7 @@ public class FavoritesActivity extends AppCompatActivity {
         Toolbar actionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(actionBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_pets);
 
         RecyclerView rvPets = (RecyclerView) findViewById(R.id.rvFavoritePets);
         rvPets.setLayoutManager(new LinearLayoutManager(getBaseContext()));

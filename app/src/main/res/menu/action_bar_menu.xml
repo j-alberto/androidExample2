@@ -5,4 +5,7 @@
         android:title="@string/action_favorites"
         app:showAsAction="always"
         android:icon="@drawable/five_star"></item>
+
+    <item android:title="@string/action_other"
+        app:showAsAction="collapseActionView"></item>
 </menu>

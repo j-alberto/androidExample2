@@ -1,27 +1,6 @@
 <resources>
-    <string name="app_name">Example</string>
-    <string name="btn_enter">Click</string>
-    <string name="txt_titulo">Hello World</string>
-    <string name="snack_message">It\'s a SnackBar!</string>
-    <string name="snack_action">Action</string>
-    <string-array name="planetas">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
-    </string-array>
-    <string name="card_title">Android 5.0</string>
-    <string name="card_text">In this version Material Design was introduced, Android Lollipop</string>
-
-    <string name="event_create">onCreate()</string>
-    <string name="event_start">onStart()</string>
-    <string name="event_restart">onRestart()</string>
-    <string name="event_resume">onResume()</string>
-    <string name="event_pause">onPause()</string>
-    <string name="event_stop">onStop()</string>
-    <string name="event_destroy">onDestroy()</string>
+    <string name="app_name">Petagram</string>
+    <string name="app_favorites">Petagram - Favorites</string>
+    <string name="btn_enter">Enter Puppy</string>
+    <string name="action_favorites">Favorites</string>
 </resources>

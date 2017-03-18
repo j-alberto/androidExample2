@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jarojas.example.FavoritesActivity">
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/action_bar"></include>
+
+    <android.support.v7.widget.RecyclerView android:id="@+id/rvFavoritePets"
+        android:layout_below="@id/miActionBar"
+        android:layout_margin="@dimen/cardview_default_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

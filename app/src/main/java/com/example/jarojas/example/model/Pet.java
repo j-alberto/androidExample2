@@ -1,4 +1,4 @@
-package com.example.jarojas.example;
+package com.example.jarojas.example.model;
 
 /**
  * Created by jarojas on 17/03/17.
@@ -15,6 +15,9 @@ public class Pet {
         this.rating = rating;
         this.like = like;
         this.photoId = photoId;
+    }
+    public Pet(int rating, int photoId) {
+        this("", rating, false, photoId);
     }
 
     public String getName() {

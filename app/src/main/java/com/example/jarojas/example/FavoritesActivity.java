@@ -6,6 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.example.jarojas.example.adapter.PetRecyclerViewAdapter;
+import com.example.jarojas.example.model.PetDataset;
+
 public class FavoritesActivity extends AppCompatActivity {
 
     @Override

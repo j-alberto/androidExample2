@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jarojas.example.AboutActivity">
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/action_bar"></include>
+
+    <LinearLayout android:layout_below="@id/miActionBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_title"
+            android:textSize="@dimen/about_title"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="2dp" />
+        <TextView android:paddingTop="@dimen/about_padding"
+            android:textSize="@dimen/about_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_nombre" />
+        <TextView
+            android:textSize="@dimen/about_value"
+            android:paddingLeft="@dimen/about_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jorge Alberto Rojas Olivares" />
+        <TextView android:paddingTop="@dimen/about_padding"
+            android:textSize="@dimen/about_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_lives_in" />
+        <TextView
+            android:textSize="@dimen/about_value"
+            android:paddingLeft="@dimen/about_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Un lugar de Ecatepec" />
+       <!-- <TextView android:paddingTop="@dimen/about_padding"
+            android:textSize="@dimen/about_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_expertise" />
+        <TextView
+            android:textSize="@dimen/about_value"
+            android:paddingLeft="@dimen/about_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SQL y NoSQL, Java(JPA, JTA, JEE, Spring, etc), Web(html,js,css,scss, etc), R&amp;D" />-->
+        <TextView android:paddingTop="@dimen/about_padding"
+            android:textSize="@dimen/about_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_interests" />
+        <TextView
+            android:textSize="@dimen/about_value"
+            android:paddingLeft="@dimen/about_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videojuegos, Literatura, Deportes al aire libre, Humor, Nuevas tecnologias." />
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+

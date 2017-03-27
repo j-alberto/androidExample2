@@ -5,4 +5,9 @@
     <dimen name="petImageHeight">250dp</dimen>
     <dimen name="cardview_default_margin">4dp</dimen>
     <dimen name="elevation_action_bar">4dp</dimen>
+    <dimen name="about_value">14sp</dimen>
+    <dimen name="about_title">24sp</dimen>
+    <dimen name="about_caption">18sp</dimen>
+    <dimen name="about_padding">15dp</dimen>
+    <dimen name="my_pet_name">24sp</dimen>
 </resources>

@@ -6,12 +6,23 @@
     android:orientation="vertical"
     tools:context="com.example.jarojas.example.fragment.MyPetFragment">
 
-
+<!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="204dp"
-        app:srcCompat="@drawable/bunny2" />
+        app:srcCompat="@drawable/bunny2" />-->
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="210dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bunny2"
+        app:civ_border_color="@color/colorAccent">
+
+    </com.mikhaellopez.circularimageview.CircularImageView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

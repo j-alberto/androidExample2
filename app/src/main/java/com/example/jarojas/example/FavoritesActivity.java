@@ -7,10 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.example.jarojas.example.adapter.PetRecyclerViewAdapter;
-import com.example.jarojas.example.model.PetDataset;
+import com.example.jarojas.example.model.Pet;
+import com.example.jarojas.example.presenter.FavoritePetPresenter;
 
-public class FavoritesActivity extends AppCompatActivity {
+import java.util.List;
 
+public class FavoritesActivity extends AppCompatActivity implements IPetRecyclerViewAdapterView {
+
+    private  RecyclerView rvPets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +25,27 @@ public class FavoritesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_pets);
 
-        RecyclerView rvPets = (RecyclerView) findViewById(R.id.rvFavoritePets);
-        rvPets.setLayoutManager(new LinearLayoutManager(getBaseContext()));
-        rvPets.setAdapter(new PetRecyclerViewAdapter(PetDataset.FAVORITES));
+        rvPets = (RecyclerView) findViewById(R.id.rvFavoritePets);
+
+        new FavoritePetPresenter(this, getApplicationContext())
+            .presentPets();
+
     }
+
+    @Override
+    public void createLayout() {
+        rvPets.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+    }
+
+    @Override
+    public PetRecyclerViewAdapter createAdapter(List<Pet> pets) {
+        return new PetRecyclerViewAdapter(pets);
+    }
+
+    @Override
+    public void initAdapter(PetRecyclerViewAdapter petAdapter) {
+        rvPets.setAdapter(petAdapter);
+    }
+
+
 }

@@ -5,19 +5,21 @@ package com.example.jarojas.example.model;
  */
 
 public class Pet {
+    private int id;
     private String name;
     private int rating;
     private boolean like;
     private int photoId;
 
-    public Pet(String name, int rating, boolean like, int photoId) {
+    public Pet(int id, String name, int rating, boolean like, int photoId) {
+        this.id = id;
         this.name = name;
         this.rating = rating;
         this.like = like;
         this.photoId = photoId;
     }
     public Pet(int rating, int photoId) {
-        this("", rating, false, photoId);
+        this(0,"", rating, false, photoId);
     }
 
     public String getName() {
@@ -50,5 +52,13 @@ public class Pet {
 
     public void setPhotoId(int photoId) {
         this.photoId = photoId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

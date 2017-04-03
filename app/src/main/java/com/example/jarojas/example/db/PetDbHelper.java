@@ -98,4 +98,14 @@ public class PetDbHelper extends SQLiteOpenHelper {
         return pets;
     }
 
+    public int addOneLike(Pet pet) {
+        ContentValues values = new ContentValues();
+        values.put(COL_RATING,pet.getRating()+1);
+
+        getWritableDatabase().update(PET_TABLE,values,COL_ID+"=?",new String[]{String.valueOf(pet.getId())});
+
+        getWritableDatabase().close();
+        return pet.getRating()+1;
+    }
+
 }

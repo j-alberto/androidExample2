@@ -35,4 +35,9 @@ final class PetTable {
             COL_RATING +"," +
             COL_PHOTO_ID +
             " from "+PET_TABLE+" order by "+COL_RATING+" desc limit 5";
+
+    static final String DML_UPDATE_RATING = "update "+
+            PET_TABLE+" set "+
+            COL_RATING+" =?" +
+            " where "+COL_ID+" =?";
 }

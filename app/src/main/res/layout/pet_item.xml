@@ -23,7 +23,7 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageView android:id="@+id/ivBoneLike"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/bonewhite" />

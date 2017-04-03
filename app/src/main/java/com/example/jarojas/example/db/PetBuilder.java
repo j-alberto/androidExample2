@@ -25,4 +25,8 @@ public class PetBuilder {
     public List<Pet> findTop5Favorites() {
         return petHelper.findTop5ByRating();
     }
+
+    public int addOneLike(Pet pet){
+        return petHelper.addOneLike(pet);
+    }
 }

@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jarojas.example.R;
+import com.example.jarojas.example.db.PetBuilder;
 import com.example.jarojas.example.model.Pet;
 
 import java.util.List;
@@ -19,6 +21,7 @@ import java.util.List;
 public class PetRecyclerViewAdapter extends RecyclerView.Adapter<PetRecyclerViewAdapter.ViewHolder>{
 
     private List<Pet> pets;
+    PetBuilder petBuilder;
 
     public PetRecyclerViewAdapter(List<Pet> pets) {
         this.pets = pets;
@@ -27,17 +30,26 @@ public class PetRecyclerViewAdapter extends RecyclerView.Adapter<PetRecyclerView
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_item,parent,false);
+        petBuilder = new PetBuilder(view.getContext());
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Pet pet = pets.get(position);
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        final Pet pet = pets.get(position);
         holder.tvName.setText(pet.getName());
         holder.tvRating.setText(""+pet.getRating());
         holder.ivPetImage.setImageResource(pet.getPhotoId());
 
+        holder.ivBoneLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pet.setRating(petBuilder.addOneLike(pet));
+                holder.tvRating.setText(""+pet.getRating());
+                Toast.makeText(v.getContext(),"Diste like a "+pet.getName(),Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -50,12 +62,14 @@ public class PetRecyclerViewAdapter extends RecyclerView.Adapter<PetRecyclerView
         private final TextView tvName;
         private final TextView tvRating;
         private final ImageView ivPetImage;
+        private final ImageView ivBoneLike;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.tvName = (TextView) itemView.findViewById(R.id.tvName);
             this.tvRating = (TextView) itemView.findViewById(R.id.tvRating);
             this.ivPetImage = (ImageView) itemView.findViewById(R.id.ivPetImage);
+            this.ivBoneLike = (ImageView) itemView.findViewById(R.id.ivBoneLike);
         }
     }
 }

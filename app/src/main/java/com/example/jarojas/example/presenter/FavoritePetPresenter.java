@@ -3,6 +3,7 @@ package com.example.jarojas.example.presenter;
 import android.content.Context;
 
 import com.example.jarojas.example.IPetRecyclerViewAdapterView;
+import com.example.jarojas.example.db.PetBuilder;
 import com.example.jarojas.example.model.Pet;
 import com.example.jarojas.example.model.PetDataset;
 
@@ -16,11 +17,12 @@ public class FavoritePetPresenter implements IPetPresenter {
 
     private IPetRecyclerViewAdapterView petAdapterView;
     private Context context;
-    private PetB
+    private PetBuilder petBuilder;
 
     public FavoritePetPresenter(IPetRecyclerViewAdapterView petAdapterView, Context context) {
         this.petAdapterView = petAdapterView;
         this.context = context;
+        petBuilder = new PetBuilder(context);
     }
 
     @Override
@@ -33,6 +35,6 @@ public class FavoritePetPresenter implements IPetPresenter {
 
     @Override
     public List<Pet> findPets() {
-        return PetDataset.FAVORITES;
+        return petBuilder.findTop5Favorites();
     }
 }

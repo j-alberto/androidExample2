@@ -37,8 +37,7 @@ public class HomeFragment extends Fragment implements IPetRecyclerViewAdapterVie
 
         rvPets = (RecyclerView) v.findViewById(R.id.rvPets);
 
-        new MainPetPresenter(this,getContext())
-                .presentPets();
+        new MainPetPresenter(this, getContext()).presentPets();
 
         return v;
     }

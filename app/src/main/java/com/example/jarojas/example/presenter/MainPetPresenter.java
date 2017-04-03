@@ -1,8 +1,10 @@
 package com.example.jarojas.example.presenter;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.example.jarojas.example.IPetRecyclerViewAdapterView;
+import com.example.jarojas.example.db.PetBuilder;
 import com.example.jarojas.example.model.Pet;
 import com.example.jarojas.example.model.PetDataset;
 
@@ -16,10 +18,12 @@ public class MainPetPresenter implements IPetPresenter {
 
     private IPetRecyclerViewAdapterView petAdapterView;
     private Context context;
+    PetBuilder petBuilder;
 
     public MainPetPresenter(IPetRecyclerViewAdapterView petAdapterView, Context context) {
         this.petAdapterView = petAdapterView;
         this.context = context;
+        petBuilder = new PetBuilder(context);
     }
 
     @Override
@@ -32,6 +36,9 @@ public class MainPetPresenter implements IPetPresenter {
 
     @Override
     public List<Pet> findPets() {
-        return PetDataset.PET_LIST;
+//        return PetDataset.PET_LIST;
+        List<Pet> pets = petBuilder.findAll();
+        Log.i("PRESENTER", "findPets: "+pets.size());
+        return pets;
     }
 }

@@ -27,8 +27,7 @@ public class FavoritesActivity extends AppCompatActivity implements IPetRecycler
 
         rvPets = (RecyclerView) findViewById(R.id.rvFavoritePets);
 
-        new FavoritePetPresenter(this, getApplicationContext())
-            .presentPets();
+        new FavoritePetPresenter(this, getBaseContext()).presentPets();
 
     }
 
